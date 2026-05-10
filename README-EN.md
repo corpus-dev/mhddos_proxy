@@ -9,7 +9,7 @@ Attention! Updates happen automatically, all steps except the last one need to b
 Our software does not contain viruses, but some antiviruses identify such software as potentially dangerous and block the files.
 You may need to allow running the downloaded file, or disable your antivirus.
 
-1. [Download the latest version](https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_win.exe)
+1. [Download the latest version](https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_win.exe)
    and save to a convenient location
 2. To start, simply launch the file by double-click
 
@@ -17,11 +17,11 @@ You may need to allow running the downloaded file, or disable your antivirus.
 1\. Download the appropriate version for your platform
 ##### x64 (amd64)
 ```
-curl https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_linux -Lo mhddos_proxy_linux 
+curl https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_linux -Lo mhddos_proxy_linux 
 ```
 ##### arm64 (aarch64)
 ```
-curl https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy_linux 
+curl https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy_linux 
 ```
 
 2\. Next, run `chmod +x mhddos_proxy_linux`
@@ -43,7 +43,7 @@ Aarch64 version should work on RPi4, probably on RPi3 too. The main thing is to 
 Requies [Termux](https://github.com/termux/termux-app/releases) and **rooted device**
 ```
 apt update -y && apt install -y root-repo tsu glibc-repo glibc
-curl https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy
+curl https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy
 chmod +x mhddos_proxy
 grun -c mhddos_proxy
 ```

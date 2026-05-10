@@ -11,7 +11,7 @@
 Деякі антивіруси визначають цей ПО як потенційно небезпечне, і блокують файли.
 Можливо, вам доведеться дозволити виконання завантаженого файлу, або вимкнути свій антивірус.
 
-1. [Завантажте останню версію](https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_win.exe)
+1. [Завантажте останню версію](https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_win.exe)
    і збережіть у зручному місці
 2. Щоб розпочати, просто запустіть файл подвійним кліком
 
@@ -19,11 +19,11 @@
 1\. Завантажте версію для своєї платформи
 ##### x64 (amd64)
 ```
-curl https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_linux -Lo mhddos_proxy_linux 
+curl https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_linux -Lo mhddos_proxy_linux 
 ```
 ##### arm64 (aarch64)
 ```
-curl https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy_linux 
+curl https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy_linux 
 ```
 
 2\. Далі, виконайте `chmod +x mhddos_proxy_linux`  
@@ -45,7 +45,7 @@ Aarch64 версія має працювати на RPi4, можливо і на
 Потрібен [Termux](https://github.com/termux/termux-app/releases) та **рутований пристрій**
 ```
 apt update -y && apt install -y root-repo tsu glibc-repo glibc
-curl https://github.com/corpus-dev/mhddos_proxy_releases/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy
+curl https://github.com/corpus-dev/mhddos_proxy/releases/latest/download/mhddos_proxy_linux_arm64 -Lo mhddos_proxy
 chmod +x mhddos_proxy
 grun -c mhddos_proxy
 ```
