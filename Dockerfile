@@ -1,6 +1,5 @@
-FROM --platform=$TARGETPLATFORM debian:bullseye-slim as runtime
-ARG TARGETPLATFORM
-WORKDIR mhddos_proxy
+FROM debian:bookworm-slim as runtime
+WORKDIR /mhddos_proxy
 RUN if [ "$TARGETPLATFORM" = "linux/arm64" ]; \
     then FILENAME=mhddos_proxy_linux_arm64; \
     else FILENAME=mhddos_proxy_linux; fi \

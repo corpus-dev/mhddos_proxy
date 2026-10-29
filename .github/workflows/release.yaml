@@ -3,6 +3,11 @@ name: release
 on:
   release:
     types: [ released ]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to build
+        required: true
 
 permissions:
   contents: write
@@ -26,7 +31,7 @@ jobs:
           context: .
           platforms: linux/amd64, linux/arm64
           push: true
-          tags: ghcr.io/corpus-dev/mhddos_proxy, ghcr.io/corpus-dev/mhddos_proxy:${{ github.event.release.tag_name }}
+          tags: ghcr.io/corpus-dev/mhddos_proxy, ghcr.io/corpus-dev/mhddos_proxy:${{ github.event.inputs.tag || github.event.release.tag_name }}
 
   update_version:
     runs-on: ubuntu-latest
@@ -38,7 +43,7 @@ jobs:
 
       - name: Update version.txt
         run: |
-          echo "${{ github.event.release.tag_name }}" > version.txt
+          echo "${{ github.event.inputs.tag || github.event.release.tag_name }}" > version.txt
           git config user.name "corpus-dev"
           git config user.email "corpus-dev@example.invalid"
           git add version.txt
